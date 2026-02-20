@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TODO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Todo List</h1>
+        <!-- login button coming later -->
+    </header>
+
+    <!-- Page layout -->
+    <div class="page-layout">
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li>Navigation</li>
+                <li>Settings</li>
+                <li>Profile</li>
+                <li>Help</li>
+                <li> <a href="contact.html"> Contact </a></li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <main>
+
+            <!-- Add new todo -->
+            <section class="left">
+                <input type="text" id="todoInput" placeholder="New todo item">
+                <br><br>
+                <div class="add-controls">
+                    <button id="addButton">Add New Item</button>
+
+                    <select id="importance" name="importance">
+                    <option value="urgent">Urgent</option>
+                    <option value="normal">Normal</option>
+                    <option value="notUrgent">Not Urgent</option>
+    </select>
+</div>
+
+            </form>
+            </section>
+
+            
+
+            <!-- Todo list -->
+            <section class="right">
+                <ul id="todoList"></ul>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Todo List. All rights reserved.</p>
+        <p id="joke">The joke is loading...</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+body {
+    background-color: rgb(255, 245, 226);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: rgb(255, 181, 243);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+/* Page layout */
+.page-layout {
+    display: flex;
+    min-height: 80vh;
+}
+
+/* Navigation */
+nav {
+    width: 200px;
+    background-color: rgb(255, 219, 250);
+    padding: 50px 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+/* Sections */
+.left, .right {
+    width: 40%;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Todo list */
+ul {
+    text-align: center;
+    list-style-position: inside;
+    list-style-type: square;
+    font-size: larger;
+}
+
+.urgent {
+    color: red;
+}
+
+.normal {
+    color: black;
+}
+
+/* Buttons */
+.removeButton {
+    background-color: deeppink;
+    border-color: deeppink;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.removeButton:hover {
+    background-color: rgb(255, 155, 208);
+}
+
+#addButton {
+    background-color: deeppink;
+    border-color: deeppink;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: rgb(255, 155, 208);
+    border-color: white;
+}
+
+#todoInput {
+    font-size: larger;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+#myForm {
+    text-align: center;
+    font-size: x-large;
+}
+
+#contact{
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    border-color: black;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+
+#contact:hover{
+    background-color: rgb(255, 155, 208);
+    color: black;
+    border-color: white;
+}
+
+#FullName{
+    padding: 10px 25px;
+    font-size: large;
+}
+
+#Email{
+    padding: 10px 25px;
+    font-size: large;
+}
+
+#message{
+    padding: 10px 25px;
+}
+
+#importance{
+    padding: 3px 5px;
+    background-color: deeppink;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#importance:hover{
+    background-color: rgb(255, 155, 208);
+    border-color: white;
+}

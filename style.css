@@ -154,9 +154,17 @@ footer a {
     background-color: deeppink;
     cursor: pointer;
     font-size: 15px;
+    margin-left: 8px;
 }
 
 #importance:hover{
     background-color: rgb(255, 155, 208);
     border-color: white;
+}
+
+.infoBtn {
+    background-color: rgb(255, 155, 208);
+    cursor: pointer;
+    margin-left: 8px;
+    border-color: rgb(255, 155, 208);
 }

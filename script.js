@@ -4,6 +4,7 @@ const todoList = document.getElementById("todoList");
 const todoInput = document.getElementById("todoInput");
 const addButton = document.getElementById("addButton");
 const importance = document.getElementById("importance");
+const description = document.getElementById("description");
 
 function saveTodos() {
     localStorage.setItem("todos", JSON.stringify(todo));
@@ -14,7 +15,13 @@ function renderTodo() {
 
     todo.forEach((toDo, index) => {
         const li = document.createElement("li");
+        li.dataset.description = toDo.tododescription;
         li.textContent = `[${toDo.priority}] ${toDo.text}`;
+
+        const infoBtn = document.createElement("button");
+        infoBtn.textContent = "i";
+        infoBtn.className = "infoBtn";
+        
 
         if(toDo.priority === "urgent") li.style.color = "red";
         if(toDo.priority === "normal") li.style.color = "orange";
@@ -26,6 +33,16 @@ function renderTodo() {
                     ? "none"
                     : "line-through";
         });
+
+        infoBtn.addEventListener("click",function(e){
+            e.stopPropagation();
+
+            alert (
+                "Task: " + toDo.text +
+                "\nPriority: " + toDo.priority +
+                "\nDescription: " + toDo.tododescription
+        );
+        });
   
         const removeButton = document.createElement("button");
         removeButton.textContent = "✕";
@@ -36,6 +53,7 @@ function renderTodo() {
             removeTodo(index);
         });
 
+        li.appendChild(infoBtn);
         li.appendChild(removeButton);
         todoList.appendChild(li);
     });
@@ -50,16 +68,19 @@ function removeTodo(index) {
 addButton.addEventListener("click", function () {
     const text = todoInput.value.trim();
     const priority = importance.value;
+    const tododescription = description.value.trim();
 
     if (text === "") return;
 
     todo.push({
         text: text,
-        priority: priority
+        priority: priority,
+        tododescription: tododescription
     });
     saveTodos();
     renderTodo();
     todoInput.value = "";
+    description.value = "";
 });
 
 

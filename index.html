@@ -34,16 +34,22 @@
 
             <!-- Add new todo -->
             <section class="left">
-                <input type="text" id="todoInput" placeholder="New todo item">
-                <br><br>
+                
                 <div class="add-controls">
-                    <button id="addButton">Add New Item</button>
-
+                <input type="text" id="todoInput" placeholder="New todo item">
+                
                     <select id="importance" name="importance">
                     <option value="normal">Normal</option>
                     <option value="urgent">Urgent</option>
                     <option value="notUrgent">Not Urgent</option>
+
+                    
     </select>
+    <br><br>
+    <textarea id="description" rows="5" cols="30" placeholder="Enter description (optional)"></textarea>
+    <br><br>
+    <button id="addButton">Add New Item</button>
+
 </div>
 
             </form>

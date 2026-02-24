@@ -3,6 +3,7 @@ let todo = JSON.parse(localStorage.getItem("todos")) || [];
 const todoList = document.getElementById("todoList");
 const todoInput = document.getElementById("todoInput");
 const addButton = document.getElementById("addButton");
+const importance = document.getElementById("importance");
 
 function saveTodos() {
     localStorage.setItem("todos", JSON.stringify(todo));
@@ -13,7 +14,11 @@ function renderTodo() {
 
     todo.forEach((toDo, index) => {
         const li = document.createElement("li");
-        li.textContent = toDo + " ";
+        li.textContent = `[${toDo.priority}] ${toDo.text}`;
+
+        if(toDo.priority === "urgent") li.style.color = "red";
+        if(toDo.priority === "normal") li.style.color = "orange";
+        if(toDo.priority === "notUrgent") li.style.color = "green";
 
         li.addEventListener("click", function () {
             li.style.textDecoration =
@@ -44,10 +49,14 @@ function removeTodo(index) {
 
 addButton.addEventListener("click", function () {
     const text = todoInput.value.trim();
+    const priority = importance.value;
 
     if (text === "") return;
 
-    todo.push(text);
+    todo.push({
+        text: text,
+        priority: priority
+    });
     saveTodos();
     renderTodo();
     todoInput.value = "";

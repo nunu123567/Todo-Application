@@ -168,3 +168,20 @@ footer a {
     margin-left: 8px;
     border-color: rgb(255, 155, 208);
 }
+
+.aboutUs_right{
+    width: 40%;
+    display: flex;
+    margin-left: 225px;
+    margin-top: 50px;
+
+}
+
+#aboutUs {
+    text-align: center;
+    align-content: center;
+    border-style: double;
+    border-radius: 50px;
+    font-size: larger;
+    background-image: url(flower.jpg);
+}
